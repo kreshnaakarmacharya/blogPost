@@ -1,0 +1,126 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset Defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fullscreen Layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fixed Navigation Bar */
+nav {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Form Layout (Takes Full Screen) */
+form {
+    flex: 1; /* Makes the form fill remaining space */
+    padding: 80px 20px 20px; /* Avoid overlap with navbar */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Form Fieldset */
+fieldset {
+    border: none;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Input and Textarea Styling */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+/* Textarea */
+textarea {
+    height: 250px;
+    resize: none;
+}
+
+/* Placeholder Styling */
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Input Focus Effect */
+input:focus, textarea:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+/* File Input */
+input[type="file"] {
+    background: transparent;
+    color: #fff;
+}
+
+/* Submit Button */
+button {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    body {
+        flex-direction: column;
+    }
+}
